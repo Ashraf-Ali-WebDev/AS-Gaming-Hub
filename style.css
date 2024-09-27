@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+background: #000;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: lawngreen;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    position: fixed;
+    z-index: 2;
+}
+
+nav .logo img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+nav .menu {
+    display: flex;
+}
+
+nav .menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .menu ul li {
+    margin: 0 15px;
+    list-style: none;
+    font-size: larger;
+    font-weight: bold;
+}
+
+nav .menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav .menu ul li a:hover{
+    color: orangered;
+}
+
+nav .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+nav .hamburger span {
+    display: block;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    nav .menu {
+        display: none;
+    }
+
+    nav .hamburger {
+        display: flex;
+    }
+
+    nav .menu.active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: lawngreen;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav .menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav .menu ul li {
+        margin: 20px 0;
+    }
+}
+#home {
+    display: flex;
+    margin-top: 60px;
+    flex-wrap: wrap; 
+}
+
+.home1 {
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#home .home1 h1 span {
+    color: orange;
+    font-family: Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 45px;
+}
+
+#home .home1 button {
+    background: lawngreen;
+    padding: 12px;
+    color: white;
+    border-radius: 8px;
+    font-style: italic;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.home2 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 80vh;
+    animation: slider 9s linear infinite;
+}
+
+@keyframes slider {
+    0% {
+        background-image: url('https://plus.unsplash.com/premium_photo-1664910795422-527440cfce2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmlkZW8lMjBnYW1lc3xlbnwwfHwwfHx8MA%3D%3D');
+    }
+    20% {
+        background-image: url('https://plus.unsplash.com/premium_photo-1677870728110-3b3b41677a9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmlkZW8lMjBnYW1lc3xlbnwwfHwwfHx8MA%3D%3D');
+    }
+    40% {
+        background-image: url('https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg');
+    }
+    60% {
+        background-image: url('https://i0.wp.com/highschool.latimes.com/wp-content/uploads/2021/09/league-of-legends.jpeg?fit=1607%2C895&ssl=1');
+    }
+    80% {
+        background-image: url('https://assets.xboxservices.com/assets/4e/bc/4ebcb533-e184-42f3-833b-9aa47a81f39e.jpg?n=153142244433_Poster-Image-1084_1920x720.jpg');
+    }
+    100% {
+        background-image: url('https://media.istockphoto.com/id/1394308880/photo/hands-of-gamer-playing-mobile-video-games-on-his-smartphone.webp?a=1&b=1&s=612x612&w=0&k=20&c=Nb3I2alJhoMCCJ0xxndAAHSEf2Gjb24CniL55BL_uLY=');
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column; 
+                align-items: center; 
+    }
+
+    .home1 {
+        width: 100%;
+        height: auto; 
+        padding: 20px;
+    }
+
+    .home2 {
+        width: 100%; 
+        height: 40vh; 
+        margin-top: 20px; 
+    }
+
+    #home .home1 h1 span {
+        font-size: 35px; 
+    }
+
+    #home .home1 h4 {
+        font-size: 18px; 
+    }
+
+    #home .home1 button {
+        font-size: medium; 
+    }
+}
+.about {
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+}
+
+.about2 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.about1 {
+    width: 50%;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-image: url('https://images.unsplash.com/photo-1606305321490-0c05711a8fb6?w=294&dpr=1&h=294&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXRodW1ibmFpbHx8U2Z4OG5uUEZOZ1V8fGVufDB8fHx8fA%3D%3D');
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; 
+        height: auto; 
+        padding: 20px; 
+    }
+
+    .about1 {
+        width: 100%; 
+        height: 40vh; 
+        margin-bottom: 20px;
+    }
+
+    .about2 {
+        width: 100%; 
+    }
+
+    .about2 h2 {
+        font-size: 28px;
+    }
+
+    .about2 p {
+        font-size: 16px; 
+        padding: 0 10px;
+    }
+}
+
+.games {
+    padding: 50px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+.game-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.game {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid lawngreen;
+
+}
+#games .game-list .game img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.game:hover {
+    transform: scale(1.05);
+}
+
+.game img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: law;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+/* Contact Section Styles */
+.contact {
+    padding: 50px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: lawngreen;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: lawngreen;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #222;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: none;
+    border-color: lawngreen;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form button {
+    padding: 12px 20px;
+    background-color: lawngreen;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.contact form button:hover {
+    background-color: darkgreen;
+    color: white;
+    transition: 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact form {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+footer {
+    background-color: #111;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 0;
+    color: #ccc;
+    font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+}
+
+footer .social {
+    margin-top: 10px;
+}
+
+footer .social a {
+    margin: 0 15px;
+    color: lawngreen;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+footer .social a:hover {
+    color: darkgreen;
+}
+
+
+
